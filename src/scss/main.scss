@@ -1,0 +1,81 @@
+@import url(//db.onlinewebfonts.com/c/9ae5e19516bc6428f1327ff3311b2617?family=DINNextW01-Light);
+$color-light-blue: rgb(54, 177, 234);
+$color-blue: rgb(1, 122, 177);
+$color-background: rgb(227, 235, 238);
+$color-dark-gray: #333333;
+$color-light-gray: #adafaa;
+$color-white: #fff;
+
+/* Global
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-white;
+}
+body {
+    background-color: $color-background;
+}
+.navbar {
+    background: $color-light-blue;
+    font-family: 'DINNextW01-Light', serif;
+    color: $color-white;
+    padding: 0;
+    .navbar-brand {
+        color: $color-white;
+    }
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header-topline {
+    background: $color-dark-gray;
+    display: flex;
+    justify-content: space-between;
+    .support-email {
+        img {
+            width: 18px;
+            margin: 0 5px;
+        }
+        a {
+            color: $color-white;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+    }
+    .header-topline-icons {
+        display: flex;
+        align-items: center;
+        .iti-flag {
+            margin: 0 10px;
+        }
+        .header-topline-link {
+            color: $color-white;
+            font-size: 1.4rem;
+            margin: 0 5px;
+            &:hover {
+                color: $color-blue;
+            }
+        }
+    }
+}
+.header-logo {
+    background: $color-white;
+}
+.navbar {
+    .nav-link {
+        color: $color-white;
+        svg {
+            fill: $color-white;
+        }
+        &:hover {
+            background: $color-blue;
+        }
+    }
+    .client-area-menu {
+        background-color: $color-dark-gray;
+    }
+}

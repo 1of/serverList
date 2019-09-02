@@ -1,0 +1,17 @@
+.iti-flag {
+    width: 24px;
+    height: 16px;
+    box-shadow: 0px 0px 1px 0px #333;
+    background-repeat: no-repeat;
+    background-color: #dbdbdb;
+    background-size: cover;
+    background-position: 0 -4px;
+}
+
+.iti-flag.us {
+    background-image: url('../img/icons/countries/united-states-of-america.png');
+}
+
+.iti-flag.ru {
+    background-image: url('../img/icons/countries/russia.png');
+}
