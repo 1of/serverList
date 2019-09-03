@@ -137,20 +137,17 @@
                 <div class="pagination">
                     <div class="container">
                         <div class="row">
-                            <p>Showing <span>20</span> / <span>20</span> servers</p>
+                            <p>Showing <span class="perPage">20</span> / <span class="numItems">20</span> servers</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
+                        <div id="pagination-container"></div>
                     <ul class="servers">
                         
                         <li class="server-item">
-                            <div class="server-short-name">
-                                <p><strong>EX42</strong></p>
-                                <a href="#">EX-Matrix</a>
-                            </div>
                             <div class="server-full-name">
                                 <p><strong>Intel Core i7-6700 Quad-Core</strong></p>
                                 <p><strong>CPU-B: </strong><span>10032</span></p>
@@ -163,8 +160,24 @@
                                 
                             </div>
                             <div class="server-spec">
-                                <p><strong>RAM: </strong><span>64 GB DDR4</span></p>
-                                <p><strong>HDD: </strong><span>2x 4 TB SATA Enterprise hard drive 7200 rpm</span></p>
+                                <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label"><strong>RAM:</strong></label>
+                                        <div class="col-sm-8">
+                                                <select class="form-control form-control-lg">
+                                                    <option>32 GB DDR4</option>
+                                                    <option>64 GB DDR4</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label"><strong>Storage:</strong></label>
+                                    <div class="col-sm-8">
+                                            <select class="form-control form-control-lg">
+                                                <option>HDD: 2x 4 TB SATA Enterprise hard drive 7200 rpm</option>
+                                                <option>SSD: 2.5" SATA 960GB Intel D3-S4610</option>
+                                            </select>
+                                    </div>
+                                </div>
                             </div>
                             <div class="server-price">
                                 <p class="price">from <span>46.80 $</span></p>
@@ -176,10 +189,6 @@
                         </li>
 
                         <li class="server-item">
-                                <div class="server-short-name">
-                                    <p><strong>EX42</strong></p>
-                                    <a href="#">EX-Matrix</a>
-                                </div>
                                 <div class="server-full-name">
                                     <p><strong>Intel Core i7-6700 Quad-Core</strong></p>
                                     <p><strong>CPU-B:</strong><span>10032</span></p>
@@ -188,6 +197,11 @@
                                         <strong>Location:</strong>
                                         <div class="iti-flag ru"></div>
                                         <div class="iti-flag us"></div>
+                                        <div class="iti-flag ua"></div>
+                                        <div class="iti-flag bg"></div>
+                                        <div class="iti-flag sg"></div>
+                                        <div class="iti-flag gb"></div>
+                                        <div class="iti-flag de"></div>
                                     </div>
                                 </div>
                                 <div class="server-spec">
@@ -204,10 +218,6 @@
                             </li>
 
                             <li class="server-item">
-                                    <div class="server-short-name">
-                                        <p><strong>EX42</strong></p>
-                                        <a href="#">EX-Matrix</a>
-                                    </div>
                                     <div class="server-full-name">
                                         <p><strong>Intel Core i7-6700 Quad-Core</strong></p>
                                         <p><strong>CPU-B:</strong><span>10032</span></p>
@@ -229,42 +239,23 @@
                                         <p class="not-in-stock">Currently not in stock</p>
                                     </div>
                             </li>
-
-                            <li class="server-item">
-                                    <div class="server-short-name">
-                                        <p><strong>EX42</strong></p>
-                                        <a href="#">EX-Matrix</a>
-                                    </div>
-                                    <div class="server-full-name">
-                                        <p><strong>Intel Core i7-6700 Quad-Core</strong></p>
-                                        <p><strong>CPU-B: </strong><span>10032</span></p>
-                                        <p class="setup-fee">Setup: $ 0.00</p>
-                                        <div class="location">
-                                            <strong>Location:</strong>
-                                            <div class="iti-flag ru"></div>
-                                            <div class="iti-flag us"></div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="server-spec">
-                                        <p><strong>RAM: </strong><span>64 GB DDR4</span></p>
-                                        <p><strong>HDD: </strong><span>2x 4 TB SATA Enterprise hard drive 7200 rpm</span></p>
-                                    </div>
-                                    <div class="server-price">
-                                        <p class="price">from <span>46.80 $</span></p>
-                                        <p>monthly</p>
-                                        <p>Setup: <span> $ 0.00</span></p>
-                                        <p>Including VAT</p>
-                                        <a href="#" class="order-link"><i class="fas fa-shopping-cart"></i> Order</a>
-                                    </div>
-                            </li>
+                            <li class="server-item"></li>
+                            <li class="server-item"></li>
+                            <li class="server-item"></li>
+                            <li class="server-item"></li>
+                            <li class="server-item"></li>
+                            <li class="server-item"></li>
+                            <li class="server-item"></li>
+                            <li class="server-item"></li>
                     </ul>
                 </div>
             </div>
         </main>
         <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
+        <script src="./libs/flaviusmatis-simplePagination/jquery.simplePagination.js"></script>
         <script src="./libs/bootstrap/bootstrap.min.js"></script>
         <script src="./libs/slick-slider/slick.min.js"></script>
         <script src="./js/slick-slider-init.js"></script>
+        <script src="./js/custom-pagination.js"></script>
     </body>
 </html>

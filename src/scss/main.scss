@@ -1,4 +1,5 @@
 @import url(//db.onlinewebfonts.com/c/9ae5e19516bc6428f1327ff3311b2617?family=DINNextW01-Light);
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 $color-light-blue: rgb(54, 177, 234);
 $color-blue: rgb(1, 122, 177);
 $color-background: rgb(227, 235, 238);
@@ -21,7 +22,7 @@ body {
 }
 .navbar {
     background: $color-light-blue;
-    font-family: 'DINNextW01-Light', serif;
+    font-family: 'Raleway', serif;
     color: $color-white;
     padding: 0;
     .navbar-brand {
@@ -29,6 +30,11 @@ body {
     }
     .container {
         padding: 0;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
     }
 }
 
@@ -89,6 +95,37 @@ body {
 }
 /* Main
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Main
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#pagination-container {
+    margin: auto;
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            span.current {
+                position: relative;
+                display: block;
+                padding: 0.5rem 0.75rem;
+                margin-left: -1px;
+                line-height: 1.25;
+                color: $color-dark-gray;
+                background-color: #fff;
+                border: 1px solid #dee2e6;
+                opacity: 0.4;
+            }
+        }
+        li.active {
+            span {
+                color: $color-white;
+                font-weight: bold;
+                background-color: $color-light-blue;
+                opacity: 1;
+            }
+        }
+    }
+}
 .main-slider {
     overflow: hidden;
 }
@@ -121,14 +158,6 @@ body {
         padding: 20px;
         font-size: 1.4rem;
     }
-    .server-short-name {
-        p {
-            margin-bottom: 0;
-        }
-        a {
-            color: $color-light-gray;
-        }
-    }
     .server-full-name {
         padding-right: 5px;
         .setup-fee {
@@ -142,12 +171,6 @@ body {
             .iti-flag {
                 margin: auto 0 auto 10px;
             }
-        }
-    }
-    .server-spec {
-        p {
-            margin-bottom: 0;
-            //padding: 10px 0;
         }
     }
     .server-price {
@@ -191,9 +214,6 @@ body {
 @media (max-width: 700px) {
     .servers .server-item {
         flex-wrap: wrap;
-        .server-short-name {
-            width: 30%;
-        }
         .server-full-name {
             width: 70%;
         }
