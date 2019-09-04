@@ -7,6 +7,7 @@
         <!-- FontAwersomeIcons -->
         <script src="https://kit.fontawesome.com/7603be8aea.js"></script>
         <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="./libs/slick-slider/slick.css" />
         <link rel="stylesheet" href="./css/main.css" />
         <link rel="stylesheet" href="./css/flag-icons.css" />
         <title>Servers list</title>
@@ -130,8 +131,15 @@
         </header>
         <main class="servers-list">   
             <div class="main-slider">
-                    <img src="./img/slider/slide1.png" alt="slide1">
-                    <img src="./img/slider/slide1.png" alt="slide2">
+                   <div class="slide">
+                       <h2>Our Servers</h2>
+                        <img src="./img/slider/slide1.png" alt="slide1">
+                   </div>
+                   <div class="slide">
+                        <h2>Our Servers 2</h2>
+                        <img src="./img/slider/slide1.png" alt="slide1">
+                   </div>
+                  
                 </div>
             <div class="pagination-container">
                 <div class="pagination">
@@ -156,26 +164,25 @@
                                     <strong>Location:</strong>
                                     <div class="iti-flag ru"></div>
                                     <div class="iti-flag us"></div>
-                                </div>
-                                
+                                </div>                              
                             </div>
                             <div class="server-spec">
                                 <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><strong>RAM:</strong></label>
-                                        <div class="col-sm-8">
-                                                <select class="form-control form-control-lg">
-                                                    <option>32 GB DDR4</option>
-                                                    <option>64 GB DDR4</option>
-                                                </select>
-                                        </div>
-                                    </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label"><strong>Storage:</strong></label>
+                                    <label class="col-sm-3 col-form-label"><i class="fas fa-memory"></i><strong>RAM:</strong></label>
                                     <div class="col-sm-8">
-                                            <select class="form-control form-control-lg">
-                                                <option>HDD: 2x 4 TB SATA Enterprise hard drive 7200 rpm</option>
-                                                <option>SSD: 2.5" SATA 960GB Intel D3-S4610</option>
-                                            </select>
+                                        <select class="form-control form-control-lg">
+                                            <option>32 GB DDR4</option>
+                                            <option>64 GB DDR4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label"><i class="fas fa-inbox"></i><strong>Storage:</strong></label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control form-control-lg">
+                                            <option>HDD: 2x 4 TB SATA Enterprise hard drive 7200 rpm</option>
+                                            <option>SSD: 2.5" SATA 960GB Intel D3-S4610</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -205,8 +212,24 @@
                                     </div>
                                 </div>
                                 <div class="server-spec">
-                                    <p><strong>RAM: </strong><span>64 GB DDR4</span></p>
-                                    <p><strong>HDD: </strong><span>2x 4 TB SATA Enterprise hard drive 7200 rpm</span></p>
+                                    <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label"><i class="fas fa-memory"></i><strong>RAM:</strong></label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control form-control-lg">
+                                                    <option>32 GB DDR4</option>
+                                                    <option>64 GB DDR4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label"><i class="fas fa-inbox"></i><strong>Storage:</strong></label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control form-control-lg">
+                                                    <option>HDD: 2x 4 TB SATA Enterprise hard drive 7200 rpm</option>
+                                                    <option>SSD: 2.5" SATA 960GB Intel D3-S4610</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                 </div>
                                 <div class="server-price">
                                     <p class="price">from <span>46.80 $</span></p>
@@ -224,23 +247,113 @@
                                         <p class="setup-fee">Setup: $ 0.00</p>
                                         <div class="location">
                                             <strong>Location:</strong>
-                                            <div class="iti-flag ru"></div>
+                                            <div class="iti-flag de"></div>
                                         </div>
                                     </div>
                                     <div class="server-spec">
-                                        <p><strong>RAM: </strong><span>64 GB DDR4</span></p>
-                                        <p><strong>HDD: </strong><span>2x 4 TB SATA Enterprise hard drive 7200 rpm</span></p>
+                                        <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label"><i class="fas fa-memory"></i><strong>RAM:</strong></label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-lg">
+                                                        <option>32 GB DDR4</option>
+                                                        <option>64 GB DDR4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label"><i class="fas fa-inbox"></i><strong>Storage:</strong></label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-lg">
+                                                        <option>HDD: 2x 4 TB SATA Enterprise hard drive 7200 rpm</option>
+                                                        <option>SSD: 2.5" SATA 960GB Intel D3-S4610</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                     </div>
                                     <div class="server-price">
                                         <p class="price">from <span>46.80 $</span></p>
                                         <p>monthly</p>
                                         <p>Setup: <span> $ 0.00</span></p>
                                         <p>Including VAT</p>
-                                        <p class="not-in-stock">Currently not in stock</p>
+                                        <a class="ask-us-link"><i class="fas fa-comments"></i> Ask for config</a>
                                     </div>
                             </li>
-                            <li class="server-item"></li>
-                            <li class="server-item"></li>
+                            <li class="server-item">
+                                    <div class="server-full-name">
+                                        <p><strong>Intel Core i7-6700 Quad-Core</strong></p>
+                                        <p><strong>CPU-B:</strong><span>10032</span></p>
+                                        <p class="setup-fee">Setup: $ 0.00</p>
+                                        <div class="location">
+                                            <strong>Location:</strong>
+                                            <div class="iti-flag de"></div>
+                                        </div>
+                                    </div>
+                                    <div class="server-spec">
+                                        <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label"><i class="fas fa-memory"></i><strong>RAM:</strong></label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-lg">
+                                                        <option>32 GB DDR4</option>
+                                                        <option>64 GB DDR4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label"><i class="fas fa-inbox"></i><strong>Storage:</strong></label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-lg">
+                                                        <option>HDD: 2x 4 TB SATA Enterprise hard drive 7200 rpm</option>
+                                                        <option>SSD: 2.5" SATA 960GB Intel D3-S4610</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="server-price">
+                                        <p class="price">from <span>46.80 $</span></p>
+                                        <p>monthly</p>
+                                        <p>Setup: <span> $ 0.00</span></p>
+                                        <p>Including VAT</p>
+                                        <a class="ask-us-link"><i class="fas fa-comments"></i> Ask for config</a>
+                                    </div>
+                            </li>
+                            <li class="server-item">
+                                    <div class="server-full-name">
+                                        <p><strong>Intel Core i7-6700 Quad-Core</strong></p>
+                                        <p><strong>CPU-B:</strong><span>10032</span></p>
+                                        <p class="setup-fee">Setup: $ 0.00</p>
+                                        <div class="location">
+                                            <strong>Location:</strong>
+                                            <div class="iti-flag de"></div>
+                                        </div>
+                                    </div>
+                                    <div class="server-spec">
+                                        <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label"><i class="fas fa-memory"></i><strong>RAM:</strong></label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-lg">
+                                                        <option>32 GB DDR4</option>
+                                                        <option>64 GB DDR4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label"><i class="fas fa-inbox"></i><strong>Storage:</strong></label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-lg">
+                                                        <option>HDD: 2x 4 TB SATA Enterprise hard drive 7200 rpm</option>
+                                                        <option>SSD: 2.5" SATA 960GB Intel D3-S4610</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="server-price">
+                                        <p class="price">from <span>46.80 $</span></p>
+                                        <p>monthly</p>
+                                        <p>Setup: <span> $ 0.00</span></p>
+                                        <p>Including VAT</p>
+                                        <a class="ask-us-link"><i class="fas fa-comments"></i> Ask for config</a>
+                                    </div>
+                            </li>
                             <li class="server-item"></li>
                             <li class="server-item"></li>
                             <li class="server-item"></li>

@@ -38,6 +38,12 @@ body {
     }
 }
 
+@mixin box-shadow-gray {
+    -webkit-box-shadow: 3px 6px 16px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 6px 16px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 6px 16px -6px rgba(0, 0, 0, 0.75);
+}
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .header-topline {
@@ -93,11 +99,13 @@ body {
         background-color: $color-dark-gray;
     }
 }
-/* Main
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Main
+/* Pagination
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+main.servers-list {
+    background: linear-gradient(180deg, #fff 0, #c7ddef 53%, #f6f2e4);
+}
 #pagination-container {
     margin: auto;
     ul {
@@ -128,6 +136,24 @@ body {
 }
 .main-slider {
     overflow: hidden;
+    .slide {
+        position: relative;
+        h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            top: 40%;
+            margin: auto;
+            right: 0;
+            left: 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
 }
 .pagination-container {
     margin-top: 4rem;
@@ -157,9 +183,14 @@ body {
         margin: 20px 0;
         padding: 20px;
         font-size: 1.4rem;
+        @include box-shadow-gray;
+        &:hover {
+            background: #fafafa;
+        }
     }
     .server-full-name {
         padding-right: 5px;
+        width: 30%;
         .setup-fee {
             color: $color-white;
             display: inline-block;
@@ -168,8 +199,18 @@ body {
         }
         .location {
             display: flex;
+            flex-wrap: wrap;
             .iti-flag {
                 margin: auto 0 auto 10px;
+            }
+        }
+    }
+    .server-spec {
+        .col-form-label {
+            display: flex;
+            .fas {
+                line-height: 1.5;
+                margin-right: 10px;
             }
         }
     }
@@ -188,7 +229,8 @@ body {
                 font-size: 2rem;
             }
         }
-        .order-link {
+        .order-link,
+        .ask-us-link {
             color: $color-white;
             display: block;
             text-align: center;
@@ -198,12 +240,13 @@ body {
             text-transform: uppercase;
             width: 100%;
             &:hover {
+                color: $color-white;
                 background: $color-blue;
                 text-decoration: none;
             }
         }
         p.not-in-stock {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #999999;
             text-transform: uppercase;
             margin-top: 40px;
@@ -215,7 +258,7 @@ body {
     .servers .server-item {
         flex-wrap: wrap;
         .server-full-name {
-            width: 70%;
+            width: 100%;
         }
         .server-price {
             width: 100%;

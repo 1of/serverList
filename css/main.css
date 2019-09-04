@@ -110,9 +110,13 @@ body {
 }
 
 /* Main
+/* Pagination
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Main
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+main.servers-list {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(53%, #c7ddef), to(#f6f2e4));
+  background: linear-gradient(180deg, #fff 0, #c7ddef 53%, #f6f2e4);
+}
+
 #pagination-container {
   margin: auto;
 }
@@ -145,6 +149,27 @@ body {
 
 .main-slider {
   overflow: hidden;
+}
+
+.main-slider .slide {
+  position: relative;
+}
+
+.main-slider .slide h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  top: 40%;
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+
+.main-slider .slide img {
+  width: 100%;
 }
 
 .pagination-container {
@@ -181,10 +206,17 @@ body {
   margin: 20px 0;
   padding: 20px;
   font-size: 1.4rem;
+  -webkit-box-shadow: 3px 6px 16px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 6px 16px -6px rgba(0, 0, 0, 0.75);
+}
+
+.servers .server-item:hover {
+  background: #fafafa;
 }
 
 .servers .server-full-name {
   padding-right: 5px;
+  width: 30%;
 }
 
 .servers .server-full-name .setup-fee {
@@ -198,10 +230,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .servers .server-full-name .location .iti-flag {
   margin: auto 0 auto 10px;
+}
+
+.servers .server-spec .col-form-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.servers .server-spec .col-form-label .fas {
+  line-height: 1.5;
+  margin-right: 10px;
 }
 
 .servers .server-price {
@@ -224,7 +269,8 @@ body {
   font-size: 2rem;
 }
 
-.servers .server-price .order-link {
+.servers .server-price .order-link,
+.servers .server-price .ask-us-link {
   color: #fff;
   display: block;
   text-align: center;
@@ -235,13 +281,15 @@ body {
   width: 100%;
 }
 
-.servers .server-price .order-link:hover {
+.servers .server-price .order-link:hover,
+.servers .server-price .ask-us-link:hover {
+  color: #fff;
   background: #017ab1;
   text-decoration: none;
 }
 
 .servers .server-price p.not-in-stock {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #999999;
   text-transform: uppercase;
   margin-top: 40px;
@@ -253,7 +301,7 @@ body {
         flex-wrap: wrap;
   }
   .servers .server-item .server-full-name {
-    width: 70%;
+    width: 100%;
   }
   .servers .server-item .server-price {
     width: 100%;
