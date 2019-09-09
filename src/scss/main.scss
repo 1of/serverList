@@ -106,34 +106,7 @@ body {
 main.servers-list {
     background: linear-gradient(180deg, #fff 0, #c7ddef 53%, #f6f2e4);
 }
-#pagination-container {
-    margin: auto;
-    ul {
-        list-style: none;
-        display: flex;
-        li {
-            span.current {
-                position: relative;
-                display: block;
-                padding: 0.5rem 0.75rem;
-                margin-left: -1px;
-                line-height: 1.25;
-                color: $color-dark-gray;
-                background-color: #fff;
-                border: 1px solid #dee2e6;
-                opacity: 0.4;
-            }
-        }
-        li.active {
-            span {
-                color: $color-white;
-                font-weight: bold;
-                background-color: $color-light-blue;
-                opacity: 1;
-            }
-        }
-    }
-}
+
 .main-slider {
     overflow: hidden;
     .slide {
@@ -165,6 +138,35 @@ main.servers-list {
         p {
             margin-bottom: 0;
             font-size: 0.9rem;
+        }
+    }
+}
+
+#pagination-container {
+    margin: auto;
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            span.current {
+                position: relative;
+                display: block;
+                padding: 0.5rem 0.75rem;
+                margin-left: -1px;
+                line-height: 1.25;
+                color: $color-dark-gray;
+                background-color: #fff;
+                border: 1px solid #dee2e6;
+                opacity: 0.4;
+            }
+        }
+        li.active {
+            span {
+                color: $color-white;
+                font-weight: bold;
+                background-color: $color-light-blue;
+                opacity: 1;
+            }
         }
     }
 }
@@ -201,11 +203,18 @@ main.servers-list {
             display: flex;
             flex-wrap: wrap;
             .iti-flag {
-                margin: auto 0 auto 10px;
+                margin: auto 10px auto 10px;
+            }
+            span {
+                color: gray;
+                font-size: 1rem;
+                line-height: 2.2;
             }
         }
     }
     .server-spec {
+        width: 60%;
+        padding-right: 20px;
         .col-form-label {
             display: flex;
             .fas {
@@ -258,6 +267,9 @@ main.servers-list {
     .servers .server-item {
         flex-wrap: wrap;
         .server-full-name {
+            width: 100%;
+        }
+        .server-spec {
             width: 100%;
         }
         .server-price {
