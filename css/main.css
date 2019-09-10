@@ -226,6 +226,7 @@ main.servers-list {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  line-height: 2.2;
 }
 
 .servers .server-full-name .location .iti-flag {
